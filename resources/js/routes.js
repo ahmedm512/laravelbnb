@@ -1,17 +1,30 @@
 import VueRouter from "vue-router";
-import Bookables from "./bookables/Bookables";
+import UserTable from "./table/UserTable";
+import Login from "./auth/Login";
+import Register from "./auth/Register";
+import BarChar from "./graph/BarChar.vue";
 //import Example2 from "./components/Example2";
 
 const routes = [
     {
-        path: "/",
-        component: Bookables,
-        name: "home",
+        path: "/users/table",
+        component: UserTable,
+        name: "table",
     },
     {
-        path: "/second",
-        //component: Example2,
-        name: "second",
+        path: "/auth/login",
+        component: Login,
+        name: "login",
+    },
+    {
+        path: "/auth/register",
+        component: Register,
+        name: "register",
+    },
+    {
+        path: "/dashboard",
+        component: BarChar,
+        name: "bar-char",
     },
 ];
 

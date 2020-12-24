@@ -22,9 +22,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-
-Route::get('bookables', 'App\Http\Controllers\Api\BookablesController@index');
-Route::get('bookables/{id}', 'App\Http\Controllers\Api\BookablesController@show');
-
 Route::get('users', 'App\Http\Controllers\Api\UserController@index');
 Route::get('user/{id}', 'App\Http\Controllers\Api\UserController@show');
+Route::delete('user/{id}', 'App\Http\Controllers\Api\UserController@destroy');
+Route::put('user/{id}', 'App\Http\Controllers\Api\UserController@update');
+
+Route::get('users/male', 'App\Http\Controllers\Api\UserController@getMale');
+Route::get('users/female', 'App\Http\Controllers\Api\UserController@getFemale');
+Route::get('users/job', 'App\Http\Controllers\Api\UserController@getJob');
+Route::get('users/jobt', 'App\Http\Controllers\Api\UserController@getJobT');
+
+//Route::apiResource('users', 'App\Http\Controllers\Api\UserController');

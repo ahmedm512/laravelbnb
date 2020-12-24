@@ -28,7 +28,7 @@ class UserFactory extends Factory
     ];
         return [
             'name' => $this->faker->name,
-            'jop'=> $this->faker->jobTitle,
+            'job'=> $this->faker->jobTitle,
             'gender'=> Arr::random($gender),
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
