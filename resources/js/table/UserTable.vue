@@ -50,7 +50,7 @@ export default {
   data () {
     return {
       loading: false,
-      items,
+      items:[],
       fields,
       startDate: 1608422400,
       endDate: 1608786924

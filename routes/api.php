@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Bookables;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;

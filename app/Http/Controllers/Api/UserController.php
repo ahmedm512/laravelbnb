@@ -56,4 +56,30 @@ class UserController extends Controller
         ->groupBy('job'); // this one is collection's group by
     }
 
+    public function dataConter()
+    {
+      
+        $male = count(user::where('gender' , "=" , "male")->get());
+        $female= count(user::where('gender' , "=" , "female")->get());
+        $user= count(user::all());
+
+       return response()->json([
+            'male' => $male ,
+            'female' =>$female,
+            'user' =>$user
+        ]);
+    }
+    public function jobs ()
+    {
+        $jobs = [];
+        $users = user::all();
+        foreach($users as $user) {
+            $jobs[] = $user->job;
+        }
+
+         return $jobs ;
+
+    }
+
+
 }
